@@ -8,9 +8,9 @@
 
 ;(ns clj-test1.montecarlo-simulation (:import yahoofinance.YahooFinance))
 
-(def h (.getHistory (YahooFinance/get "DJI")))
-(def price (.getPrice (.getQuote (yahoofinance.YahooFinance/get "GOOG"))))
-(println price)
+;(def h (.getHistory (YahooFinance/get "DJI")))
+;(def price (.getPrice (.getQuote (yahoofinance.YahooFinance/get "GOOG"))))
+;(println price)
 
 
 (defn mean [coll]
@@ -29,7 +29,7 @@
 
 
 (defn build-historical-close-vector [ticker] (get-historical-closes get-close-price (vector (.getHistory (yahoofinance.YahooFinance/get ticker)))))
-(build-historical-close-vector "MSFT")
+;(build-historical-close-vector "MSFT")
 
 
 (defn standard-deviation [coll]
@@ -60,8 +60,8 @@
   (* price (+ 1
               (incanter.stats/quantile-normal prob :mean mn :sd (calc-daily-volatility histCloses)))))
 
-(defn get-start-price [ticker] (.getPrice (.getQuote (yahoofinance.YahooFinance/get ticker))))
-(get-start-price "MSFT")
+(defn get-start-price [ticker] (.getPrice (.getQuote (YahooFinance/get ticker))))
+;(get-start-price "MSFT")
 (defn calc-mcs-prices
   [price prob histCloses]
   (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]
@@ -73,6 +73,6 @@
                    (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]
                      (loop [i 0 result-set []] (if (< i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))
 
-(start-simulation "DAX")
+;(start-simulation "DAX")
 
-(defn -main [&args]   (println (start-simulation "DAX")))
+;(defn -main [&args]   (println (start-simulation "DAX")))

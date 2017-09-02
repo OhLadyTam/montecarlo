@@ -1,8 +1,9 @@
 (ns montecarlo.routes.home
   (:require [montecarlo.layout :as layout]
-            [compojure.core :refer [defroutes GET]]
+            [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [montecarlo.montecarlo-simulation :as mcsim]))
 
 (defn home-page []
   (layout/render
@@ -13,9 +14,9 @@
 
 (defn montecarlosimulation-page [] (layout/render "montecarlosimulation.html"))
 
-(defn simulate-page [] (layout/render "about.html"))
+(defn simulate-page [ticker] (str "************ " ticker " da li imas ticker?"))
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (GET "/simulate" [] (simulate-page)))
+  (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)))
 

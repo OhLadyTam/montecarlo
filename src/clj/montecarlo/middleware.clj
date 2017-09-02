@@ -7,9 +7,10 @@
             [ring.middleware.webjars :refer [wrap-webjars]]
             [muuntaja.core :as muuntaja]
             [muuntaja.format.transit :as transit-format]
-            [muuntaja.middleware :refer [wrap-format wrap-params]]
+            [muuntaja.middleware :refer [wrap-format]]
             [montecarlo.config :refer [env]]
             [ring.middleware.flash :refer [wrap-flash]]
+            [ring.middleware.params :refer [wrap-params]]
             [immutant.web.middleware :refer [wrap-session]]
             [ring.middleware.defaults :refer [site-defaults wrap-defaults]])
   (:import [javax.servlet ServletContext]
@@ -78,6 +79,7 @@
   (-> ((:middleware defaults) handler)
       wrap-webjars
       wrap-flash
+      wrap-params
       (wrap-session {:cookie-attrs {:http-only true}})
       (wrap-defaults
         (-> site-defaults
