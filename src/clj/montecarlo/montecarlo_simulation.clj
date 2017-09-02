@@ -65,7 +65,7 @@
 (defn calc-mcs-prices
   [price prob histCloses]
   (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]
-    (if (< i 21)
+    (if (< i 20)
       (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))
       result-set)))
 

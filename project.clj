@@ -27,7 +27,9 @@
                  [ring/ring-core "1.6.2"]
                  [ring/ring-defaults "0.3.1"]
                  [selmer "1.11.0"]
-                 [incanter "1.5.7"]]
+                 [incanter "1.5.7"]
+                 [clj-time "0.14.0"]]
+
 
   :min-lein-version "2.0.0"
 
@@ -37,7 +39,7 @@
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
-  :main ^:skip-aot montecarlo.core
+  ;:main ^:skip-aot montecarlo.core
 
   :plugins [[lein-cprop "1.0.3"]
             [lein-immutant "2.1.0"]]
