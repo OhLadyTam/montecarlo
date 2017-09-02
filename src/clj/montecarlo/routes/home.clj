@@ -11,7 +11,11 @@
 (defn about-page []
   (layout/render "about.html"))
 
+(defn montecarlosimulation-page [] (layout/render "montecarlosimulation.html"))
+
+(defn simulate-page [] (layout/render "about.html"))
+
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)))
+  (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (GET "/simulate" [] (simulate-page)))
 
