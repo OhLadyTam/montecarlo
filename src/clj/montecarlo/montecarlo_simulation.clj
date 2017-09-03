@@ -74,5 +74,3 @@
                      (loop [i 0 result-set []] (if (< i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))
 
 ;(start-simulation "DAX")
-
-;(defn -main [&args]   (println (start-simulation "DAX")))

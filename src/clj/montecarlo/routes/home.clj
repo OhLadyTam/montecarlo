@@ -3,7 +3,7 @@
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]
-            [montecarlo.montecarlo-simulation :as mcsim]
+     ;       [montecarlo.montecarlo-simulation :as mcsim]
             [selmer.parser :as selmer]
             [clj-time.core :as t]
             [clj-time.periodic :as p]
@@ -19,8 +19,11 @@
 
 (defn montecarlosimulation-page [] (layout/render "montecarlosimulation.html"))
 
-(defn get-dates-header [] (take 21  (p/periodic-seq (t/now) (t/days 1))))
-(get-dates-header)
+(defn unparse-date [date] (f/unparse (f/formatter "dd/MM/yy") date))
+
+(defn get-dates-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
+(defn unparse-dates [coll] (loop [i 0 rs []] (if (< i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))
+
 
 ;(defn render-dates-in-header [] (selmer.parser/render-file "montecarlosimulation.html" {:dates (get-dates-header)}))
 

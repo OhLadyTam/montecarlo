@@ -34,12 +34,12 @@
   :min-lein-version "2.0.0"
 
   :jvm-opts ["-server" "-Dconf=.lein-env"]
-  :java-source-paths ["D:\\clo-new\\montecarlo\\src\\lib"]
+;  :java-source-paths ["D:\\simulation\\montecarlo\\src\\lib"]
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
-  ;:main ^:skip-aot montecarlo.core
+;;:main ^:skip-aot montecarlo.core
 
   :plugins [[lein-cprop "1.0.3"]
             [lein-immutant "2.1.0"]]
