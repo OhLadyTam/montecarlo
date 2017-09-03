@@ -77,4 +77,4 @@
 (defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))
 
 
-(start-simulation "DAX")
+;(start-simulation "DAX")

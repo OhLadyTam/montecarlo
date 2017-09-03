@@ -37,7 +37,7 @@
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
- ; :main ^:skip-aot montecarlo.core
+  :main ^:skip-aot montecarlo.core
 
   :plugins [[lein-cprop "1.0.3"]
             [lein-immutant "2.1.0"]]

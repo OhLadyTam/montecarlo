@@ -32,10 +32,15 @@
 
 
 
-(defn get-simulation-results [coll] (selmer.parser/render-file "montecarlosimulation.html" {:prices coll}))
+;(defn get-simulation-results [coll] (loop [i 0] (when (< i 50) (selmer.parser/render-file "montecarlosimulation.html" {:prices (nth coll i)}) (recur (inc i)))))
 
+(defn get-simulation-results [coll] (selmer.parser/render-file "montecarlosimulation.html" {:resultset coll :dates (get-dates-header)}))
+(def v [1 2 3 4 5])
 
-(defn simulate-page [ticker] ((render-dates-in-header) (get-simulation-results (mcsim/start-simulation ticker))))
+(loop [i 0] (when (< i 5) (println (nth v i)) (recur (inc i))))
+(dotimes [num 5] (println (nth v num)))
+
+(defn simulate-page [ticker] (get-simulation-results (mcsim/start-simulations ticker)))
 
 (defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)))
 
