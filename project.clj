@@ -34,7 +34,7 @@
   :min-lein-version "2.0.0"
 
   :jvm-opts ["-server" "-Dconf=.lein-env"]
-;  :java-source-paths ["D:\\simulation\\montecarlo\\src\\lib"]
+  :java-source-paths ["D:\\simulation\\montecarlo\\src\\lib"]
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
   :resource-paths ["resources"]

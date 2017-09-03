@@ -84,7 +84,7 @@ public class Stock {
      * 
      * @param refresh   indicates whether the data should be requested again to Yahoo Finance
      * @return          basic lib.quotes data available for this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      */
     public StockQuote getQuote(boolean refresh) throws IOException {
         if(refresh) {
@@ -123,7 +123,7 @@ public class Stock {
      * 
      * @param refresh   indicates whether the data should be requested again to Yahoo Finance
      * @return          statistics available for this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      */
     public StockStats getStats(boolean refresh) throws IOException {
         if(refresh) {
@@ -163,7 +163,7 @@ public class Stock {
      * 
      * @param refresh   indicates whether the data should be requested again to Yahoo Finance
      * @return          dividend data available for this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      */
     public StockDividend getDividend(boolean refresh) throws IOException {
         if(refresh) {
@@ -194,7 +194,7 @@ public class Stock {
      * 
      * @param interval      the interval of the historical data
      * @return              a list of historical lib.quotes from this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      * @see                 #getHistory() 
      */
     public List<HistoricalQuote> getHistory(Interval interval) throws IOException {
@@ -211,7 +211,7 @@ public class Stock {
      * 
      * @param from          start date of the historical data
      * @return              a list of historical lib.quotes from this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      * @see                 #getHistory() 
      */
     public List<HistoricalQuote> getHistory(Calendar from) throws IOException {
@@ -229,7 +229,7 @@ public class Stock {
      * @param from          start date of the historical data
      * @param interval      the interval of the historical data
      * @return              a list of historical lib.quotes from this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      * @see                 #getHistory() 
      */
     public List<HistoricalQuote> getHistory(Calendar from, Interval interval) throws IOException {
@@ -247,7 +247,7 @@ public class Stock {
      * @param from          start date of the historical data
      * @param to            end date of the historical data
      * @return              a list of historical lib.quotes from this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      * @see                 #getHistory() 
      */
     public List<HistoricalQuote> getHistory(Calendar from, Calendar to) throws IOException {
@@ -266,7 +266,7 @@ public class Stock {
      * @param to            end date of the historical data
      * @param interval      the interval of the historical data
      * @return              a list of historical lib.quotes from this stock
-     * @throws java.io.IOException when there's a connection problem
+     * @throws IOException when there's a connection problem
      * @see                 #getHistory() 
      */
     public List<HistoricalQuote> getHistory(Calendar from, Calendar to, Interval interval) throws IOException {

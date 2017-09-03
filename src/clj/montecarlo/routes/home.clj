@@ -3,7 +3,7 @@
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]
-     ;       [montecarlo.montecarlo-simulation :as mcsim]
+            [montecarlo.montecarlo-simulation :as mcsim]
             [selmer.parser :as selmer]
             [clj-time.core :as t]
             [clj-time.periodic :as p]
