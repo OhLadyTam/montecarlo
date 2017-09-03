@@ -21,13 +21,21 @@
 
 (defn unparse-date [date] (f/unparse (f/formatter "dd/MM/yy") date))
 
-(defn get-dates-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
+(defn get-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
 (defn unparse-dates [coll] (loop [i 0 rs []] (if (< i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))
 
+(defn get-dates-header [] (unparse-dates (get-dates)))
 
-;(defn render-dates-in-header [] (selmer.parser/render-file "montecarlosimulation.html" {:dates (get-dates-header)}))
 
-(defn simulate-page [ticker] (str ticker))
+(defn render-dates-in-header [] (selmer.parser/render-file "montecarlosimulation.html" {:dates (get-dates-header)}))
+
+
+
+
+(defn get-simulation-results [coll] (selmer.parser/render-file "montecarlosimulation.html" {:prices coll}))
+
+
+(defn simulate-page [ticker] ((render-dates-in-header) (get-simulation-results (mcsim/start-simulation ticker))))
 
 (defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)))
 

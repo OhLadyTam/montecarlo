@@ -69,8 +69,12 @@
       (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))
       result-set)))
 
-(defn start-simulation [ticker] ()
+(defn start-simulations [ticker]
                    (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]
                      (loop [i 0 result-set []] (if (< i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))
 
-;(start-simulation "DAX")
+
+(defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))
+
+
+(start-simulation "DAX")

@@ -1,20 +1,17 @@
 package yahoofinance;
 
+import histquotes.HistQuotesRequest;
+import histquotes.HistoricalQuote;
+import histquotes.Interval;
+import histquotes2.HistQuotes2Request;
+import quotes.stock.*;
+
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import histquotes.HistQuotesRequest;
-import histquotes.HistoricalQuote;
-import histquotes.Interval;
-import histquotes2.HistQuotes2Request;
-import quotes.stock.StockDividend;
-import quotes.stock.StockQuote;
-import quotes.stock.StockQuotesData;
-import quotes.stock.StockQuotesRequest;
-import quotes.stock.StockStats;
 
 /**
  *
