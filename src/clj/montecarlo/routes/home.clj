@@ -43,9 +43,11 @@
 (defn create-csv [ticker] (incanter.core/save (create-dataset ticker) "D:/d.csv"))
 (defn download [ticker] (selmer.parser/render-file "montecarlosimulation.html" (create-csv ticker)))
 
-(defn open-chart [ticker] (incanter.core/view (incanter.charts/scatter-plot :Sepal.Length :Sepal.Width :data (incanter.datasets/get-dataset (create-dataset ticker)) :title "Montecarlo" :x-label "days" :y-label "prices")))
+(defn open-chart1 [ticker] (incanter.core/view (incanter.charts/scatter-plot :data (incanter.datasets/get-dataset (create-dataset ticker)) :title "Montecarlo" :x-label "days" :y-label "prices")))
 
-(defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getxls" [ticker] (str "da li radi") (download ticker)) (POST "/getchart" [ticker] (open-chart ticker)))
+(defn open-chart [ticker] (selmer.parser/render-file "montecarlosimulation.html" (incanter.core/view (incanter.charts/scatter-plot :data (incanter.datasets/get-dataset (incanter.core/dataset ["x1"] [[1] [2]])   :title "Montecarlo" :x-label "days" :y-label "prices")))))
+
+(defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getxls" [ticker] (str "da li radi") (download ticker)) (POST "/getchart" [ticker1] (open-chart ticker1)))
 
 ;(incanter.core/save)
 
