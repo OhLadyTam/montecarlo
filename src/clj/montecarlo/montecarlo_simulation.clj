@@ -1,5 +1,5 @@
 (ns montecarlo.montecarlo-simulation
-  (:require incanter.stats)
+  (:require incanter.stats incanter.core incanter.charts incanter.pdf)
   (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))
   ;(:import (yahoofinance YahooFinance Stock)
    ;        (histquotes HistoricalQuote)
@@ -78,3 +78,4 @@
 
 
 ;(start-simulation "DAX")
+;(incanter.pdf/save-pdf (incanter.core/view (incanter.charts/histogram (incanter.stats/sample-normal 1000))) "./pdf-chart.pdf")

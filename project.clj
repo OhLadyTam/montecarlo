@@ -30,7 +30,7 @@
                  [incanter "1.5.7"]]
 
   :min-lein-version "2.0.0"
-
+  :repl-options {:timeout 120000}
   :jvm-opts ["-server" "-Dconf=.lein-env"]
   :java-source-paths ["src/lib"]
   :source-paths ["src/clj"]
