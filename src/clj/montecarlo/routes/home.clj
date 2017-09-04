@@ -1,11 +1,12 @@
 (ns montecarlo.routes.home
+  (:require incanter.stats incanter.core incanter.charts incanter.pdf incanter.datasets incanter.excel)
   (:require [montecarlo.layout :as layout]
             [compojure.core :refer [defroutes GET POST]]
-            [compojure.http response]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]
             [montecarlo.montecarlo-simulation :as mcsim]
             [selmer.parser :as selmer]
+
             [clj-time.core :as t]
             [clj-time.periodic :as p]
             [clj-time.format :as f])
@@ -19,11 +20,12 @@
 (defn about-page []
   (layout/render "about.html"))
 
-(defn montecarlosimulation-page1 [] (layout/render "montecarlosimulation.html"))
+(defn montecarlosimulation-page [] (layout/render "montecarlosimulation.html"))
 
-(defn save-chart [] (incanter.core/save (incanter.charts/histogram (incanter.stats/sample-normal 1000)) "chart.png")
+;(defn save-chart [] (incanter.core/save (incanter.charts/histogram (incanter.stats/sample-normal 1000)) "chart.png")
 
-  (defn montecarlosimulation-page [] (selmer.parser/render-file "montecarlosimulation.html" {:image  (save-chart)})))
+;  (defn montecarlosimulation-page [] (selmer.parser/render-file "montecarlosimulation.html" {:image  (save-chart)})))
+
 (defn unparse-date [date] (f/unparse (f/formatter "dd/MM/yy") date))
 
 (defn get-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
@@ -35,36 +37,17 @@
 
 (defn simulate-page [ticker] (get-simulation-results (mcsim/start-simulations ticker)))
 
-(defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)))
+(defn get-xls [ticker] (incanter.excel/save-xls (incanter.datasets/get-dataset (mcsim/start-simulation ticker)) "D:/montecarlosimulation.xls"))
+
+(defn create-dataset [ticker] (incanter.core/dataset ["col1"](mcsim/start-simulation ticker) :delim \space))
+(defn create-csv [ticker] (incanter.core/save (create-dataset ticker) "D:/d.csv"))
+(defn download [ticker] (selmer.parser/render-file "montecarlosimulation.html" (create-csv ticker)))
+
+(defn open-chart [ticker] (incanter.core/view (incanter.charts/scatter-plot :Sepal.Length :Sepal.Width :data (incanter.datasets/get-dataset (create-dataset ticker)) :title "Montecarlo" :x-label "days" :y-label "prices")))
+
+(defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getxls" [ticker] (str "da li radi") (download ticker)) (POST "/getchart" [ticker] (open-chart ticker)))
+
+;(incanter.core/save)
 
 
-(defn gen-samp-hist-png
-  [request size-str mean-str sd-str]
-  (let [size (if (nil? size-str)
-               1000
-               (Integer/parseInt size-str))
-        m (if (nil? mean-str)
-            0
-            (Double/parseDouble mean-str))
-        s (if (nil? sd-str)
-            1
-            (Double/parseDouble sd-str))
-        samp (incanter.stats/sample-normal size
-                            :mean m
-                            :sd s)
-        chart (incanter.charts/histogram
-                samp
-                :title "Normal Sample"
-                :x-label (str "sample-size = " size
-                              ", mean = " m
-                              ", sd = " s))
-        out-stream (ByteArrayOutputStream.)
-        in-stream (do
-                    (incanter.core/save chart out-stream)
-                    (ByteArrayInputStream.
-                      (.toByteArray out-stream)))
-        header {:status 200
-                :headers {"Content-Type" "image/png"}}]
-    (response/update-response request
-                     header
-                     in-stream)))
+;(incanter.core/save (mcsim/start-simulation "goog") "D:/mcs.csv")
