@@ -33,9 +33,19 @@
     </tbody>
 </table>
 </div>
+
 <div>
-    <input type="submit" class="btn btn-primary" value="Get xls" formaction="/getxls" formmethod="post">
+    <form class="form-horizontal" action="/getxls" method="post">
+        <fieldset>
+            <div class="form-group">
+                <label class="control-label" for="ticker">Ticker</label>
+                <input type="text" class="form-control" name="ticker" id="ticker2" placeholder="ticker">
+                <input type="submit" class="btn btn-primary" value="Simulate">
+            </div>
+        </fieldset>
+    </form>
 </div>
+
 
 <div>
     <form class="form-horizontal" action="/getchart" method="post">

@@ -19,8 +19,8 @@
       <file leaf-file-name="home.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="45" column="164" lean-forward="false" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="164" />
+            <state relative-caret-position="113">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -29,7 +29,7 @@
       <file leaf-file-name="montecarlo_simulation.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/montecarlo_simulation.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
+            <state relative-caret-position="478">
               <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
               <folding />
             </state>
@@ -49,8 +49,8 @@
       <file leaf-file-name="montecarlosimulation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/templates/montecarlosimulation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="41" column="81" lean-forward="false" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -238,7 +238,7 @@
       <recent name="D:\clo-new\montecarlo\src\clj\montecarlo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1504561282041">{:repl-history {:ide [], :local [{:command &quot;(defn get-dates-header [] (vector (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(t/days (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (t/days (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(defn get-dates-header [] (take 21  (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 73, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/parse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 42, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn format-date\n  [date-str]\n  (f/unparse (f/formatter \&quot;dd.MM.yyyy\&quot;) (f/parse custom-formatter date-str)))&quot;, :offset 108, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 44, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 69, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21  (unparse-dates (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 89, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector get-dates-header)&quot;, :offset 25, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (unparse-date (t/now)) (unparse-date (t/days 1)))))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (iterate unparse-date (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 95, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-date [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 68, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (take 21 (iterate unparse-date coll)))&quot;, :offset 65, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 72, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (nth coll i))) rs)))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (vector (get-dates-header)))&quot;, :offset 43, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(get-dates-header)&quot;, :offset 18, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i))) rs))))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (get-dates-header))&quot;, :offset 34, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home\n  (:require [montecarlo.layout :as layout]\n            [compojure.core :refer [defroutes GET POST]]\n            [ring.util.http-response :as response]\n            [clojure.java.io :as io]\n            [montecarlo.montecarlo-simulation :as mcsim]\n            [selmer.parser :as selmer]\n            [clj-time.core :as t]\n            [clj-time.periodic :as p]\n            [clj-time.format :as f]))&quot;, :offset 420, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(mcsim/start-simulation ticker)&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;dax\&quot;)&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;msft\&quot;)&quot;, :offset 58, :ns &quot;user&quot;} {:command &quot;(ns montecarlo.montecarlo-simulation\n  (:require incanter.stats)\n  (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))&quot;, :offset 173, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulations [ticker]\n                   (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]\n                     (loop [i 0 result-set []] (if (&lt; i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))&quot;, :offset 297, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-prices\n  [price prob histCloses]\n  (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]\n    (if (&lt; i 20)\n      (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))\n      result-set)))&quot;, :offset 245, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-start-price [ticker] (.getPrice (.getQuote (YahooFinance/get ticker))))&quot;, :offset 81, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-price [prob mn price histCloses]\n  (* price (+ 1\n              (incanter.stats/quantile-normal prob :mean mn :sd (calc-daily-volatility histCloses)))))&quot;, :offset 166, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-annual-volatility [coll] (* (Math/sqrt 252) (calc-daily-volatility coll)))&quot;, :offset 85, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-daily-volatility [coll] (normalize-stddev coll))&quot;, :offset 59, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn normalize-stddev [coll]\n  (loop [iter 1 norm []]\n    (if (&lt; iter (count coll))\n      (recur\n        (inc iter)\n        (conj norm (-\n                     (/\n                       (double (nth coll iter))\n                       (double (nth coll (- iter 1) ))) 1)))\n      (standard-deviation norm))))&quot;, :offset 306, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn standard-deviation [coll]\n  (let [avg (mean coll)\n        squares (for [x coll]\n                  (let [x-avg (- x avg)]\n                    (* x-avg x-avg)))\n        total (count coll)]\n    (-&gt; (/ (apply + squares)\n           (- total 1))\n        (Math/sqrt))))&quot;, :offset 268, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn build-historical-close-vector [ticker] (get-historical-closes get-close-price (vector (.getHistory (yahoofinance.YahooFinance/get ticker)))))&quot;, :offset 147, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-historical-closes [f history]\n  (let [historical-close (partition (count history)\n                           (apply interleave history))]\n    (reduce (fn [s coll] (conj s (apply f coll))) [] historical-close)))&quot;, :offset 220, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-close-price [x] (double (.getClose x)))&quot;, :offset 49, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn mean [coll]\n  (let [sum (apply + coll)\n        count (count coll)]\n    (if (pos? count)\n      (/ (double sum) (double count))\n      0)))&quot;, :offset 142, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))&quot;, :offset 169, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(start-simulation \&quot;DAX\&quot;)&quot;, :offset 24, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(loop [i 0] (when (&lt; i 4) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [0 5] (println v))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println num))&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println (nth v num)))&quot;, :offset 39, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def v [1 2 3 4 5])&quot;, :offset 19, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println (nth v i)) (recur (inc i))))&quot;, :offset 63, :ns &quot;montecarlo.routes.home&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1504570932946">{:repl-history {:ide [], :local [{:command &quot;(defn get-dates-header [] (vector (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(t/days (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (t/days (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(defn get-dates-header [] (take 21  (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 73, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/parse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 42, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn format-date\n  [date-str]\n  (f/unparse (f/formatter \&quot;dd.MM.yyyy\&quot;) (f/parse custom-formatter date-str)))&quot;, :offset 108, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 44, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 69, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21  (unparse-dates (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 89, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector get-dates-header)&quot;, :offset 25, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (unparse-date (t/now)) (unparse-date (t/days 1)))))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (iterate unparse-date (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 95, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-date [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 68, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (take 21 (iterate unparse-date coll)))&quot;, :offset 65, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 72, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (nth coll i))) rs)))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (vector (get-dates-header)))&quot;, :offset 43, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(get-dates-header)&quot;, :offset 18, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i))) rs))))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (get-dates-header))&quot;, :offset 34, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home\n  (:require [montecarlo.layout :as layout]\n            [compojure.core :refer [defroutes GET POST]]\n            [ring.util.http-response :as response]\n            [clojure.java.io :as io]\n            [montecarlo.montecarlo-simulation :as mcsim]\n            [selmer.parser :as selmer]\n            [clj-time.core :as t]\n            [clj-time.periodic :as p]\n            [clj-time.format :as f]))&quot;, :offset 420, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(mcsim/start-simulation ticker)&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;dax\&quot;)&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;msft\&quot;)&quot;, :offset 58, :ns &quot;user&quot;} {:command &quot;(ns montecarlo.montecarlo-simulation\n  (:require incanter.stats)\n  (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))&quot;, :offset 173, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulations [ticker]\n                   (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]\n                     (loop [i 0 result-set []] (if (&lt; i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))&quot;, :offset 297, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-prices\n  [price prob histCloses]\n  (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]\n    (if (&lt; i 20)\n      (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))\n      result-set)))&quot;, :offset 245, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-start-price [ticker] (.getPrice (.getQuote (YahooFinance/get ticker))))&quot;, :offset 81, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-price [prob mn price histCloses]\n  (* price (+ 1\n              (incanter.stats/quantile-normal prob :mean mn :sd (calc-daily-volatility histCloses)))))&quot;, :offset 166, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-annual-volatility [coll] (* (Math/sqrt 252) (calc-daily-volatility coll)))&quot;, :offset 85, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-daily-volatility [coll] (normalize-stddev coll))&quot;, :offset 59, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn normalize-stddev [coll]\n  (loop [iter 1 norm []]\n    (if (&lt; iter (count coll))\n      (recur\n        (inc iter)\n        (conj norm (-\n                     (/\n                       (double (nth coll iter))\n                       (double (nth coll (- iter 1) ))) 1)))\n      (standard-deviation norm))))&quot;, :offset 306, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn standard-deviation [coll]\n  (let [avg (mean coll)\n        squares (for [x coll]\n                  (let [x-avg (- x avg)]\n                    (* x-avg x-avg)))\n        total (count coll)]\n    (-&gt; (/ (apply + squares)\n           (- total 1))\n        (Math/sqrt))))&quot;, :offset 268, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn build-historical-close-vector [ticker] (get-historical-closes get-close-price (vector (.getHistory (yahoofinance.YahooFinance/get ticker)))))&quot;, :offset 147, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-historical-closes [f history]\n  (let [historical-close (partition (count history)\n                           (apply interleave history))]\n    (reduce (fn [s coll] (conj s (apply f coll))) [] historical-close)))&quot;, :offset 220, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-close-price [x] (double (.getClose x)))&quot;, :offset 49, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn mean [coll]\n  (let [sum (apply + coll)\n        count (count coll)]\n    (if (pos? count)\n      (/ (double sum) (double count))\n      0)))&quot;, :offset 142, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))&quot;, :offset 169, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(start-simulation \&quot;DAX\&quot;)&quot;, :offset 24, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(loop [i 0] (when (&lt; i 4) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [0 5] (println v))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println num))&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println (nth v num)))&quot;, :offset 39, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def v [1 2 3 4 5])&quot;, :offset 19, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println (nth v i)) (recur (inc i))))&quot;, :offset 63, :ns &quot;montecarlo.routes.home&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -554,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1504510651023</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added partially csv, chart functionality">
+      <created>1504561323059</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1504561323059</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added partially csv, chart functionality">
+      <created>1504563980231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1504563980231</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -574,7 +588,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5836013" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6688103" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24583964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -635,7 +649,8 @@
     <MESSAGE value="simulation changed" />
     <MESSAGE value="showing simulation results in table" />
     <MESSAGE value="added chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="added chart" />
+    <MESSAGE value="added partially csv, chart functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="added partially csv, chart functionality" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -946,28 +961,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/montecarlosimulation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/montecarlo_simulation.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -980,10 +977,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/montecarlosimulation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="41" column="81" lean-forward="false" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/montecarlo_simulation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="45" column="164" lean-forward="false" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="164" />
+        <state relative-caret-position="113">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
