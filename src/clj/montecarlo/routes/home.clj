@@ -6,7 +6,7 @@
             [clojure.java.io :as io]
             [montecarlo.montecarlo-simulation :as mcsim]
             [selmer.parser :as selmer]
-
+            [clj-time.coerce :as c]
             [clj-time.core :as t]
             [clj-time.periodic :as p]
             [clj-time.format :as f])
@@ -29,7 +29,12 @@
 (defn unparse-date [date] (f/unparse (f/formatter "dd/MM/yy") date))
 
 (defn get-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
+(println (get-dates))
 (defn unparse-dates [coll] (loop [i 0 rs []] (if (< i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))
+
+(defn get-millis [coll] (loop [i 0 rs []] (if (< i 20) (recur (inc i) (conj rs (c/to-long (nth coll i)))) rs)))
+
+(println get-millis (get-dates))
 
 (defn get-dates-header [] (unparse-dates (get-dates)))
 
@@ -62,8 +67,45 @@
 (def mcs-dataset (incanter.core/to-dataset mcs))
 (incanter.core/col-names mcs-dataset)
 (println mcs-dataset)
+(incanter.core/nrow mcs-dataset)
 
-(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset) (incanter.core/view (incanter.charts/xy-plot :col-0 :col-1)))
+;(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset) (incanter.core/view (incanter.charts/xy-plot :col-0 :col-1)))
 (incanter.core/view (incanter.charts/scatter-plot :col-0 :col-1 :data mcs-dataset))
 
-(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset (doto (incanter.charts/add-lines :col-0))))
+(def mcs-dataset-with-dates (incanter.core/add-column :dates (get-dates-header) mcs-dataset))
+;(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset (doto (incanter.charts/add-lines :col-0))))
+
+(incanter.core/view mcs-dataset-with-dates)
+
+(incanter.core/view (incanter.core/trans (incanter.core/to-matrix mcs-dataset)))
+
+(def matr (incanter.core/trans (incanter.core/to-matrix mcs-dataset)))
+(incanter.core/view matr)
+(def mcs-ds (incanter.core/to-dataset matr))
+(incanter.core/to-dataset matr)
+(incanter.core/col-names mcs-final)
+
+(def mcs-final (incanter.core/add-column :dates (get-millis (get-dates)) mcs-ds))
+
+(incanter.core/view mcs-final)
+
+(incanter.core/view (incanter.charts/line-chart :col-1 :dates :data mcs-final))
+
+(incanter.core/with-data (incanter.datasets/get-dataset mcs-final) (incanter.core/view (incanter.charts/line-chart :col-0 :dates)))
+
+(incanter.core/with-data (incanter.datasets/get-dataset :iris) (incanter.core/view (incanter.charts/line-chart :col-0 :dates)))
+
+
+(incanter.core/view (incanter.charts/scatter-plot :col-0 :dates :data mcs-final))
+
+
+(doto (incanter.charts/scatter-plot :col-0 :col-1 :data mcs-final) incanter.core/view)
+
+(incanter.core/view (incanter.charts/time-series-plot :dates :col-0))
+
+(doto (incanter.charts/time-series-plot :dates :col-0 :data mcs-final) incanter.core/view)
+
+(def a (get-millis (get-dates)))
+(println a)
+
+
