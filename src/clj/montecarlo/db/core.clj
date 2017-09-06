@@ -23,3 +23,4 @@
 
 (defn get-user [id]
   (mc/find-one-as-map db "users" {:_id id}))
+

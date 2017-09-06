@@ -51,7 +51,19 @@
 
 (defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getxls" [ticker2] (download ticker2)) (POST "/getchart" [ticker1] (open-chart ticker1)))
 
-;(incanter.core/save)
+;(montecarlo.db.core/create-user { :first_name "John" :last_name "Doe"})
+;https://incanter.files.wordpress.com/2009/06/9781782162643_chapter-6.pdf
+(def matrix-set-2 (incanter.core/dataset [:a :b :c] [[1 2 3] [2 3 4]]))
+(incanter.core/view matrix-set-2)
+(incanter.core/view (incanter.charts/scatter-plot :a :b :data matrix-set-2))
+(incanter.core/col-names matrix-set-2)
 
+(def mcs (montecarlo.montecarlo-simulation/start-simulations "GOOG"))
+(def mcs-dataset (incanter.core/to-dataset mcs))
+(incanter.core/col-names mcs-dataset)
+(println mcs-dataset)
 
-;(incanter.core/save (mcsim/start-simulation "goog") "D:/mcs.csv")
+(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset) (incanter.core/view (incanter.charts/xy-plot :col-0 :col-1)))
+(incanter.core/view (incanter.charts/scatter-plot :col-0 :col-1 :data mcs-dataset))
+
+(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset (doto (incanter.charts/add-lines :col-0))))
