@@ -6,7 +6,7 @@
             [clojure.java.io :as io]
             [montecarlo.montecarlo-simulation :as mcsim]
             [selmer.parser :as selmer]
-
+            [clj-time.coerce :as c]
             [clj-time.core :as t]
             [clj-time.periodic :as p]
             [clj-time.format :as f])
@@ -31,6 +31,9 @@
 (defn get-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))
 (defn unparse-dates [coll] (loop [i 0 rs []] (if (< i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))
 
+(defn get-millis [coll] (loop [i 0 rs []] (if (< i 3) (recur (inc i) (conj rs (c/to-long (nth coll i)))) rs)))
+
+
 (defn get-dates-header [] (unparse-dates (get-dates)))
 
 (defn get-simulation-results [coll] (selmer.parser/render-file "montecarlosimulation.html" {:resultset coll :dates (get-dates-header)}))
@@ -53,17 +56,41 @@
 
 ;(montecarlo.db.core/create-user { :first_name "John" :last_name "Doe"})
 ;https://incanter.files.wordpress.com/2009/06/9781782162643_chapter-6.pdf
-(def matrix-set-2 (incanter.core/dataset [:a :b :c] [[1 2 3] [2 3 4]]))
-(incanter.core/view matrix-set-2)
-(incanter.core/view (incanter.charts/scatter-plot :a :b :data matrix-set-2))
-(incanter.core/col-names matrix-set-2)
+;(def matrix-set-2 (incanter.core/dataset [:a :b :c] [[1 2 3] [2 3 4]]))
+;(incanter.core/view matrix-set-2)
+;(incanter.core/view (incanter.charts/scatter-plot :a :b :data matrix-set-2))
+;(incanter.core/col-names matrix-set-2)
 
-(def mcs (montecarlo.montecarlo-simulation/start-simulations "GOOG"))
-(def mcs-dataset (incanter.core/to-dataset mcs))
-(incanter.core/col-names mcs-dataset)
-(println mcs-dataset)
+;(def mcs (montecarlo.montecarlo-simulation/start-simulations "GOOG"))
+;(def mcs-dataset (incanter.core/to-dataset mcs))
+;(incanter.core/col-names mcs-dataset)
+;(println mcs-dataset)
 
-(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset) (incanter.core/view (incanter.charts/xy-plot :col-0 :col-1)))
-(incanter.core/view (incanter.charts/scatter-plot :col-0 :col-1 :data mcs-dataset))
+;(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset) (incanter.core/view (incanter.charts/xy-plot :col-0 :col-1)))
+;(incanter.core/view (incanter.charts/scatter-plot :col-0 :col-1 :data mcs-dataset))
 
-(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset (doto (incanter.charts/add-lines :col-0))))
+;(incanter.core/with-data (incanter.datasets/get-dataset mcs-dataset (doto (incanter.charts/add-lines :col-0))))
+
+
+;(def mcs (montecarlo.montecarlo-simulation/start-simulations "GOOG"))
+
+(def vcs-rs-vec [[1 2 3] [4 5 6] [7 8 9] [0 9 8] [7 6 5] [4 3 2]])
+(def mcs-dataset (incanter.core/to-dataset vcs-rs-vec))
+(def mcs-dataset-with-dates (incanter.core/add-column :dates (get-millis (get-dates)) mcs-dataset))
+
+(def mcs-final (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset vcs-rs-vec)))
+(def trans-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec))))))
+
+(incanter.core/view (incanter.charts/line-chart :col-1 :dates :data trans-mcs))
+
+(doto (incanter.charts/time-series-plot :dates :col-0 :data trans-mcs) incanter.core/view)
+
+;crtanje jedne timeseries - RADI!!! :D
+(defn draw [] (let [tr-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec)))))] (doto (incanter.charts/time-series-plot :dates :col-0 :data tr-mcs) incanter.core/view)))
+
+;(def lm (incanter.stats/linear-model :dates :col-1))
+
+(incanter.core/with-data (incanter.datasets/get-dataset trans-mcs)
+           (doto (incanter.charts/scatter-plot :col-0 :col-1 :legend true)
+             (incanter.charts/add-lines :col-3 :col-2)
+             incanter.core/view))
