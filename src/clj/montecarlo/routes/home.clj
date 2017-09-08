@@ -81,16 +81,44 @@
 (def mcs-final (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset vcs-rs-vec)))
 (def trans-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec))))))
 
-(incanter.core/view (incanter.charts/line-chart :col-1 :dates :data trans-mcs))
+
 
 (doto (incanter.charts/time-series-plot :dates :col-0 :data trans-mcs) incanter.core/view)
 
 ;crtanje jedne timeseries - RADI!!! :D
 (defn draw [] (let [tr-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec)))))] (doto (incanter.charts/time-series-plot :dates :col-0 :data tr-mcs) incanter.core/view)))
-
+(draw)
 ;(def lm (incanter.stats/linear-model :dates :col-1))
 
+(incanter.core/view trans-mcs)
+
 (incanter.core/with-data (incanter.datasets/get-dataset trans-mcs)
-           (doto (incanter.charts/scatter-plot :col-0 :col-1 :legend true)
-             (incanter.charts/add-lines :col-3 :col-2)
+           (doto (incanter.charts/xy-plot :col-0 :col-3)
+          ;   (incanter.charts/add-lines :col-2 :col-3)
              incanter.core/view))
+
+;Prikazuje sve tri linije :D
+(println (incanter.core/col-names trans-mcs))
+
+(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates :col-1 :data trans-mcs) (incanter.charts/add-lines :dates :col-2 :data trans-mcs) incanter.core/view)
+
+(let [] (loop [i 0] (if (< i 5) (recur (inc i) ()))))
+(nth (incanter.core/col-names trans-mcs) 2)
+(incanter.charts/add-lines :dates :col-1 :data trans-mcs)
+(defn draw-with-cols [col] (doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [i 0 s[] ] (if (< i 5) (recur (inc i) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) i) :data trans-mcs)  ) ) incanter.core/view)))
+
+
+;ovaj loop radi!
+(loop [x 5]
+  (when (> x -1)
+    (println (nth (incanter.core/col-names trans-mcs) x))
+    (recur (- x 1))))
+
+
+(loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1)))
+
+
+
+(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1))) incanter.core/view)
+
+(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates (incanter.core/col-names trans-mcs) :data trans-mcs) incanter.core/view)
