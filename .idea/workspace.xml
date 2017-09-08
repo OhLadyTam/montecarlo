@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec235ea9-1f42-42d8-a17d-e6ea04dfd36a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="ec235ea9-1f42-42d8-a17d-e6ea04dfd36a" name="Default" comment="added partially csv, chart functionality">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj" afterPath="$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,34 +12,43 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="home.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="95" selection-end-column="33" />
+            <state relative-caret-position="609">
+              <caret line="117" column="258" lean-forward="true" selection-start-line="117" selection-start-column="258" selection-end-line="117" selection-end-column="258" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="montecarlo_simulation.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/montecarlo_simulation.clj">
+      <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/db/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="env.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env/dev/clj/montecarlo/env.clj">
+      <file leaf-file-name="montecarlosimulation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/montecarlosimulation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="612">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -48,28 +57,8 @@
       <file leaf-file-name="profiles.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profiles.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/core.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/config.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -121,10 +110,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="2468" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1845" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -141,199 +130,50 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="env" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="env" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="env" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="env" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="montecarlo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="clj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montecarlo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="clj" type="462c0819:PsiDirectoryNode" />
+              <item name="montecarlo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,7 +193,7 @@
       <recent name="D:\clo-new\montecarlo\src\clj\montecarlo" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1504814024556">{:repl-history {:ide [], :local [{:command &quot;(defn get-dates-header [] (vector (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(t/days (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (t/days (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(defn get-dates-header [] (take 21  (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 73, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/parse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 42, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn format-date\n  [date-str]\n  (f/unparse (f/formatter \&quot;dd.MM.yyyy\&quot;) (f/parse custom-formatter date-str)))&quot;, :offset 108, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 44, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 69, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21  (unparse-dates (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 89, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector get-dates-header)&quot;, :offset 25, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (unparse-date (t/now)) (unparse-date (t/days 1)))))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (iterate unparse-date (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 95, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-date [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 68, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (take 21 (iterate unparse-date coll)))&quot;, :offset 65, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 72, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (nth coll i))) rs)))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (vector (get-dates-header)))&quot;, :offset 43, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(get-dates-header)&quot;, :offset 18, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i))) rs))))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (get-dates-header))&quot;, :offset 34, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home\n  (:require [montecarlo.layout :as layout]\n            [compojure.core :refer [defroutes GET POST]]\n            [ring.util.http-response :as response]\n            [clojure.java.io :as io]\n            [montecarlo.montecarlo-simulation :as mcsim]\n            [selmer.parser :as selmer]\n            [clj-time.core :as t]\n            [clj-time.periodic :as p]\n            [clj-time.format :as f]))&quot;, :offset 420, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(mcsim/start-simulation ticker)&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;dax\&quot;)&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;msft\&quot;)&quot;, :offset 58, :ns &quot;user&quot;} {:command &quot;(ns montecarlo.montecarlo-simulation\n  (:require incanter.stats)\n  (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))&quot;, :offset 173, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulations [ticker]\n                   (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]\n                     (loop [i 0 result-set []] (if (&lt; i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))&quot;, :offset 297, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-prices\n  [price prob histCloses]\n  (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]\n    (if (&lt; i 20)\n      (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))\n      result-set)))&quot;, :offset 245, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-start-price [ticker] (.getPrice (.getQuote (YahooFinance/get ticker))))&quot;, :offset 81, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-price [prob mn price histCloses]\n  (* price (+ 1\n              (incanter.stats/quantile-normal prob :mean mn :sd (calc-daily-volatility histCloses)))))&quot;, :offset 166, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-annual-volatility [coll] (* (Math/sqrt 252) (calc-daily-volatility coll)))&quot;, :offset 85, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-daily-volatility [coll] (normalize-stddev coll))&quot;, :offset 59, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn normalize-stddev [coll]\n  (loop [iter 1 norm []]\n    (if (&lt; iter (count coll))\n      (recur\n        (inc iter)\n        (conj norm (-\n                     (/\n                       (double (nth coll iter))\n                       (double (nth coll (- iter 1) ))) 1)))\n      (standard-deviation norm))))&quot;, :offset 306, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn standard-deviation [coll]\n  (let [avg (mean coll)\n        squares (for [x coll]\n                  (let [x-avg (- x avg)]\n                    (* x-avg x-avg)))\n        total (count coll)]\n    (-&gt; (/ (apply + squares)\n           (- total 1))\n        (Math/sqrt))))&quot;, :offset 268, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn build-historical-close-vector [ticker] (get-historical-closes get-close-price (vector (.getHistory (yahoofinance.YahooFinance/get ticker)))))&quot;, :offset 147, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-historical-closes [f history]\n  (let [historical-close (partition (count history)\n                           (apply interleave history))]\n    (reduce (fn [s coll] (conj s (apply f coll))) [] historical-close)))&quot;, :offset 220, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-close-price [x] (double (.getClose x)))&quot;, :offset 49, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn mean [coll]\n  (let [sum (apply + coll)\n        count (count coll)]\n    (if (pos? count)\n      (/ (double sum) (double count))\n      0)))&quot;, :offset 142, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))&quot;, :offset 169, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(start-simulation \&quot;DAX\&quot;)&quot;, :offset 24, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(loop [i 0] (when (&lt; i 4) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [0 5] (println v))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println num))&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println (nth v num)))&quot;, :offset 39, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def v [1 2 3 4 5])&quot;, :offset 19, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println (nth v i)) (recur (inc i))))&quot;, :offset 63, :ns &quot;montecarlo.routes.home&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1504892193675">{:repl-history {:ide [], :local [{:command &quot;(defn get-dates-header [] (vector (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(t/days (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (t/days (take 21 (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 81, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(defn get-dates-header [] (take 21  (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 73, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/parse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 42, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn format-date\n  [date-str]\n  (f/unparse (f/formatter \&quot;dd.MM.yyyy\&quot;) (f/parse custom-formatter date-str)))&quot;, :offset 108, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) (t/now))&quot;, :offset 44, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 69, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21  (unparse-dates (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 89, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector (get-dates-header))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(vector get-dates-header)&quot;, :offset 25, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (unparse-date (t/now)) (unparse-date (t/days 1)))))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (iterate unparse-date (p/periodic-seq (t/now) (t/days 1)))))&quot;, :offset 95, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-date [date] (f/unparse (f/formatter \&quot;dd/MM/yy\&quot;) date))&quot;, :offset 68, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (take 21 (iterate unparse-date coll)))&quot;, :offset 65, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates-header [] (take 21 (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 72, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (nth coll i))) rs)))&quot;, :offset 102, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (vector (get-dates-header)))&quot;, :offset 43, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(get-dates-header)&quot;, :offset 18, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i))) rs))))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn unparse-dates [coll] (loop [i 0 rs []] (if (&lt; i 20) (recur (inc i) (conj rs (unparse-date (nth coll i)))) rs)))&quot;, :offset 117, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(unparse-dates (get-dates-header))&quot;, :offset 34, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home\n  (:require [montecarlo.layout :as layout]\n            [compojure.core :refer [defroutes GET POST]]\n            [ring.util.http-response :as response]\n            [clojure.java.io :as io]\n            [montecarlo.montecarlo-simulation :as mcsim]\n            [selmer.parser :as selmer]\n            [clj-time.core :as t]\n            [clj-time.periodic :as p]\n            [clj-time.format :as f]))&quot;, :offset 420, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(mcsim/start-simulation ticker)&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;dax\&quot;)&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(montecarlo.montecarlo-simulation/start-simulation \&quot;msft\&quot;)&quot;, :offset 58, :ns &quot;user&quot;} {:command &quot;(ns montecarlo.montecarlo-simulation\n  (:require incanter.stats)\n  (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))&quot;, :offset 173, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulations [ticker]\n                   (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)]\n                     (loop [i 0 result-set []] (if (&lt; i 100) (recur (inc i) (conj result-set (calc-mcs-prices start-price (rand) history))) result-set))))&quot;, :offset 297, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-prices\n  [price prob histCloses]\n  (loop [i 0 result-set [(calc-mcs-price prob 0 price histCloses)]]\n    (if (&lt; i 20)\n      (recur (inc i) (conj result-set (calc-mcs-price prob 0 (last result-set) histCloses)))\n      result-set)))&quot;, :offset 245, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-start-price [ticker] (.getPrice (.getQuote (YahooFinance/get ticker))))&quot;, :offset 81, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-mcs-price [prob mn price histCloses]\n  (* price (+ 1\n              (incanter.stats/quantile-normal prob :mean mn :sd (calc-daily-volatility histCloses)))))&quot;, :offset 166, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-annual-volatility [coll] (* (Math/sqrt 252) (calc-daily-volatility coll)))&quot;, :offset 85, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn calc-daily-volatility [coll] (normalize-stddev coll))&quot;, :offset 59, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn normalize-stddev [coll]\n  (loop [iter 1 norm []]\n    (if (&lt; iter (count coll))\n      (recur\n        (inc iter)\n        (conj norm (-\n                     (/\n                       (double (nth coll iter))\n                       (double (nth coll (- iter 1) ))) 1)))\n      (standard-deviation norm))))&quot;, :offset 306, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn standard-deviation [coll]\n  (let [avg (mean coll)\n        squares (for [x coll]\n                  (let [x-avg (- x avg)]\n                    (* x-avg x-avg)))\n        total (count coll)]\n    (-&gt; (/ (apply + squares)\n           (- total 1))\n        (Math/sqrt))))&quot;, :offset 268, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn build-historical-close-vector [ticker] (get-historical-closes get-close-price (vector (.getHistory (yahoofinance.YahooFinance/get ticker)))))&quot;, :offset 147, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-historical-closes [f history]\n  (let [historical-close (partition (count history)\n                           (apply interleave history))]\n    (reduce (fn [s coll] (conj s (apply f coll))) [] historical-close)))&quot;, :offset 220, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn get-close-price [x] (double (.getClose x)))&quot;, :offset 49, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn mean [coll]\n  (let [sum (apply + coll)\n        count (count coll)]\n    (if (pos? count)\n      (/ (double sum) (double count))\n      0)))&quot;, :offset 142, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(defn start-simulation [ticker] (let [start-price (get-start-price ticker) history (build-historical-close-vector ticker)] (calc-mcs-prices start-price (rand) history)))&quot;, :offset 169, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(start-simulation \&quot;DAX\&quot;)&quot;, :offset 24, :ns &quot;montecarlo.montecarlo-simulation&quot;} {:command &quot;(loop [i 0] (when (&lt; i 4) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println i) (recur (inc i))))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [0 5] (println v))&quot;, :offset 27, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println num))&quot;, :offset 31, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(dotimes [num 5] (println (nth v num)))&quot;, :offset 39, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def v [1 2 3 4 5])&quot;, :offset 19, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [i 0] (when (&lt; i 5) (println (nth v i)) (recur (inc i))))&quot;, :offset 63, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(ns montecarlo.routes.home\n  (:require incanter.stats\n            incanter.core\n            incanter.charts\n            incanter.pdf\n            incanter.datasets\n            incanter.excel)\n  (:require [montecarlo.layout :as layout]\n            [compojure.core :refer [defroutes GET POST]]\n            [ring.util.http-response :as response]\n            [clojure.java.io :as io]\n            [montecarlo.montecarlo-simulation :as mcsim]\n            [selmer.parser :as selmer]\n            [clj-time.coerce :as c]\n            [clj-time.core :as t]\n            [clj-time.periodic :as p]\n            [clj-time.format :as f])\n  (:import (java.io ByteArrayOutputStream ByteArrayInputStream)))&quot;, :offset 685, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-dates [] (take 21 (p/periodic-seq (t/now) (t/days 1))))&quot;, :offset 65, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn get-millis [coll] (loop [i 0 rs []] (if (&lt; i 3) (recur (inc i) (conj rs (c/to-long (nth coll i)))) rs)))&quot;, :offset 110, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def vcs-rs-vec [[1 2 3] [4 5 6] [7 8 9] [0 9 8] [7 6 5] [4 3 2]])&quot;, :offset 66, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def mcs-dataset (incanter.core/to-dataset vcs-rs-vec))&quot;, :offset 55, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def mcs-dataset-with-dates (incanter.core/add-column :dates (get-millis (get-dates)) mcs-dataset))&quot;, :offset 99, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def mcs-final (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset vcs-rs-vec)))&quot;, :offset 112, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def trans-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec))))))&quot;, :offset 187, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/time-series-plot :dates :col-0 :data trans-mcs) incanter.core/view)&quot;, :offset 90, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(defn draw [] (let [tr-mcs (incanter.core/add-column :dates (get-millis (get-dates)) (incanter.core/to-dataset (incanter.core/trans (incanter.core/to-matrix (incanter.core/to-dataset vcs-rs-vec)))))] (doto (incanter.charts/time-series-plot :dates :col-0 :data tr-mcs) incanter.core/view)))&quot;, :offset 289, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(draw)&quot;, :offset 6, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(def lm (incanter.stats/linear-model :dates :col-1))&quot;, :offset 52, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(incanter.core/view trans-mcs)&quot;, :offset 30, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x -1) (println (nth (incanter.core/col-names trans-mcs) x)) (recur (- x 1)) ))&quot;, :offset 99, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1)))&quot;, :offset 138, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [x 5] (when (&gt; x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1))) incanter.core/view)&quot;, :offset 220, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates :col-1 :data trans-mcs) (incanter.charts/add-lines :dates :col-2 :data trans-mcs) incanter.core/view)&quot;, :offset 197, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x -1) (println (nth (incanter.core/col-names trans-mcs) x)) (recur (dec x)) ))&quot;, :offset 99, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x -1) (incanter.core/view (nth (incanter.core/col-names trans-mcs) x)) (recur (dec x)) ))&quot;, :offset 110, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x -1) (doto (incanter.charts/xy-plot :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) incanter.core/view) (recur (dec x)) ))&quot;, :offset 164, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(loop [x 5] (when (&gt; x -1) (doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) incanter.core/view) (recur (dec x)) ))&quot;, :offset 222, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [x 5] (when (&gt; x -1) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (dec x)) )) incanter.core/view)&quot;, :offset 222, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (let [x 5] (loop [x 5] (when (&gt; x -1) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (dec x)) )) ) incanter.core/view)&quot;, :offset 235, :ns &quot;montecarlo.routes.home&quot;} {:command &quot;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (let [x 5 trans-mcs [] trans-mcs] (loop [x 5] (when (&gt; x -1) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (dec x)) )) ) incanter.core/view)&quot;, :offset 258, :ns &quot;montecarlo.routes.home&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -367,21 +207,94 @@
     </option>
   </component>
   <component name="RunManager" selected="Clojure REPL.REPL for montecarlo">
-    <configuration default="false" name="REPL for montecarlo" type="ClojureREPL" factoryName="Local" temporary="true">
+    <configuration name="REPL for montecarlo" type="ClojureREPL" factoryName="Local" temporary="true">
       <setting name="replType" value="1" />
       <module name="montecarlo" />
       <setting name="jvmArgs" value="" />
       <setting name="parameters" value="" />
       <setting name="workingDir" value="$PROJECT_DIR$" />
       <setting name="profiles" value="" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -438,29 +351,6 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Local">
       <setting name="replType" value="1" />
       <module name="" />
@@ -495,27 +385,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -564,45 +433,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Clojure REPL.REPL for montecarlo" />
-    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Clojure REPL.REPL for montecarlo" />
@@ -694,27 +524,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.948553" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31770045" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25906184" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9131833" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66847825" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.141258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -967,7 +795,8 @@
     <entry file="file://$PROJECT_DIR$/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,8 +857,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/montecarlosimulation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="41" column="81" lean-forward="false" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
+        <state relative-caret-position="612">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profiles.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/dev/clj/montecarlo/dev_middleware.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1096,7 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,8 +929,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/db/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,8 +944,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/montecarlo_simulation.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+        <state relative-caret-position="453">
+          <caret line="60" column="80" lean-forward="false" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1133,14 +954,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clj/montecarlo/routes/home.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="95" selection-end-column="33" />
+        <state relative-caret-position="609">
+          <caret line="117" column="258" lean-forward="true" selection-start-line="117" selection-start-column="258" selection-end-line="117" selection-end-column="258" />
           <folding />
         </state>
       </provider>

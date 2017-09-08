@@ -1,5 +1,10 @@
 (ns montecarlo.routes.home
-  (:require incanter.stats incanter.core incanter.charts incanter.pdf incanter.datasets incanter.excel)
+  (:require incanter.stats
+            incanter.core
+            incanter.charts
+            incanter.pdf
+            incanter.datasets
+            incanter.excel)
   (:require [montecarlo.layout :as layout]
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
@@ -42,7 +47,7 @@
 
 (defn get-xls [ticker] (incanter.excel/save-xls (incanter.datasets/get-dataset (mcsim/start-simulation ticker)) "D:/montecarlosimulation.xls"))
 
-(defn create-dataset [ticker] (incanter.core/dataset ["col1"](mcsim/start-simulation ticker) :delim \space))
+(defn create-dataset [ticker] (incanter.core/dataset ["col1"] (mcsim/start-simulation ticker) :delim \space))
 
 (def ds (incanter.core/dataset ["x1" "x2"] [[1 2] [3 4]]))
 (defn create-csv [ticker] (incanter.core/save (incanter.datasets/get-dataset ds) "d.csv"))
@@ -50,7 +55,7 @@
 
 (defn open-chart1 [ticker] (incanter.core/view (incanter.charts/scatter-plot :data (incanter.datasets/get-dataset (create-dataset ticker)) :title "Montecarlo" :x-label "days" :y-label "prices")))
 
-(defn open-chart [ticker] (selmer.parser/render-file "montecarlosimulation.html" (incanter.core/view (incanter.charts/scatter-plot :data (incanter.datasets/get-dataset (incanter.core/dataset ["x1"] [[1] [2]])   :title "Montecarlo" :x-label "days" :y-label "prices")))))
+(defn open-chart [ticker] (selmer.parser/render-file "montecarlosimulation.html" (incanter.core/view (incanter.charts/scatter-plot :data (incanter.datasets/get-dataset (incanter.core/dataset ["x1"] [[1] [2]]) :title "Montecarlo" :x-label "days" :y-label "prices")))))
 
 (defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getxls" [ticker2] (download ticker2)) (POST "/getchart" [ticker1] (open-chart ticker1)))
 
@@ -74,6 +79,9 @@
 
 ;(def mcs (montecarlo.montecarlo-simulation/start-simulations "GOOG"))
 
+
+
+
 (def vcs-rs-vec [[1 2 3] [4 5 6] [7 8 9] [0 9 8] [7 6 5] [4 3 2]])
 (def mcs-dataset (incanter.core/to-dataset vcs-rs-vec))
 (def mcs-dataset-with-dates (incanter.core/add-column :dates (get-millis (get-dates)) mcs-dataset))
@@ -92,33 +100,28 @@
 
 (incanter.core/view trans-mcs)
 
-(incanter.core/with-data (incanter.datasets/get-dataset trans-mcs)
-           (doto (incanter.charts/xy-plot :col-0 :col-3)
-          ;   (incanter.charts/add-lines :col-2 :col-3)
-             incanter.core/view))
+;(incanter.core/with-data (incanter.datasets/get-dataset trans-mcs) (doto (incanter.charts/xy-plot :col-0 :col-3)(incanter.charts/add-lines :col-2 :col-3) incanter.core/view))
 
 ;Prikazuje sve tri linije :D
-(println (incanter.core/col-names trans-mcs))
-
 (doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates :col-1 :data trans-mcs) (incanter.charts/add-lines :dates :col-2 :data trans-mcs) incanter.core/view)
 
-(let [] (loop [i 0] (if (< i 5) (recur (inc i) ()))))
-(nth (incanter.core/col-names trans-mcs) 2)
-(incanter.charts/add-lines :dates :col-1 :data trans-mcs)
-(defn draw-with-cols [col] (doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [i 0 s[] ] (if (< i 5) (recur (inc i) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) i) :data trans-mcs)  ) ) incanter.core/view)))
+;(let [] (loop [i 0] (if (< i 5) (recur (inc i) ()))))
+;(nth (incanter.core/col-names trans-mcs) 2)
+;(incanter.charts/add-lines :dates :col-1 :data trans-mcs)
+;(defn draw-with-cols [col] (doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [i 0 s[] ] (if (< i 5) (recur (inc i) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) i) :data trans-mcs)  ) ) incanter.core/view)))
 
 
 ;ovaj loop radi!
-(loop [x 5]
-  (when (> x -1)
-    (println (nth (incanter.core/col-names trans-mcs) x))
-    (recur (- x 1))))
+
+(loop [x 5] (when (> x -1) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (dec x)) ))
+
+(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (let [x 5 trans-mcs [] trans-mcs] (loop [x 5] (when (> x -1) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (dec x)) )) ) incanter.core/view)
 
 
-(loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1)))
+;(loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1)))
 
 
 
-(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1))) incanter.core/view)
+;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (loop [x 5] (when (> x 0)) (incanter.charts/add-lines :dates (nth (incanter.core/col-names trans-mcs) x) :data trans-mcs) (recur (- x 1))) incanter.core/view)
 
-(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates (incanter.core/col-names trans-mcs) :data trans-mcs) incanter.core/view)
+;(doto (incanter.charts/xy-plot :dates :col-0 :data trans-mcs) (incanter.charts/add-lines :dates (incanter.core/col-names trans-mcs) :data trans-mcs) incanter.core/view)
