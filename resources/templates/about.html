@@ -1,4 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-  <img src="{{servlet-context}}/img/warning_clojure.png"></img>
+  <div>
+    <h2>What is MonteCarlo simulation?</h2>
+    <p>
+      Monte Carlo simulations are used to model the probability of different outcomes in a process that cannot easily be predicted due to the intervention of random variables.
+      Monte Carlo simulations are named after the gambling hot spot in Monaco, since chance and random outcomes are central to the modeling technique, much as they are to games like roulette, dice and slot machines.
+      The technique was first developed by Stanislaw Ulam, a mathematician who worked on the Manhattan Project.
+      After the war, while recovering from brain surgery, Ulam entertained himself by playing countless games of solitaire.
+      He became interested in plotting the outcome of each of these games in order to observe their distribution and determine the probability of winning.
+      He mentioned this to John Von Neumann, and the two collaborated to develop the Monte Carlo simulation.
+    </p>
+    <h2> Asset price modeling </h2>
+    <p>
+      One way to employ a Monte Carlo simulation is to model possible movements of asset prices using Excel or a similar program.
+      There are two components to an asset's price movements: drift, which is a constant directional movement, and a random input, representing market volatility.
+      By analyzing historical price data, you can determine the drift, standard deviation, variance and average price movement for a security.
+      These are the building blocks of a Monte Carlo simulation.
+      To project one possible price trajectory, use the historical price data of the asset to generate a series of periodic daily returns using the natural logarithm (note that this equation differs from the usual percentage change formula):
+      <br/>
+      <b>periodic daily return = ln (day's price ÷ previous day's price)</b>
+      <br/>
+      Next use the AVERAGE, STDEV.P and VAR.P functions on the entire resulting series to obtain the average daily return, standard deviation and variance inputs, respectively.
+      The drift is equal to:
+      <br/>
+      <b>drift = average daily return - (variance ÷ 2)</b>
+      <br/>
+      Alternatively, drift can be set to 0; this choice reflects a certain theoretical orientation, but the difference will not be huge, at least for shorter time frames.
+      Next obtain a random input:
+      <br/>
+      <b>random value = standard deviation * NORMSINV(RAND())</b>
+      <br/>
+      The equation for the following day's price is:
+      <br/>
+      <b>next day's price = today's price * e ^ (drift + random value)</b>
+      <br/>
+    </p>
+
+    <a href="http://www.investopedia.com/terms/m/montecarlosimulation.asp">Read more on Investopedia</a>
+  </div>
 {% endblock %}

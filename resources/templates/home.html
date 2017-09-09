@@ -2,7 +2,30 @@
 {% block content %}
 <div class="row">
   <div class="col-sm-12">
-    {{docs|markdown}}
+    <h2 class="alert alert-success">Welcome to MonteCarlo simulation!</h2>
+    <p>
+      Welcome!
+
+      <br/>
+      There are 4 HTML pages here. This is the home page with some details about the application.
+      <br/>
+      About page gives a bit more about the concept of MonteCarlo simulation.
+      <br/>
+      MonteCarlo Simulation page is the page where you can input any ticker you want and start the simulation. You'll get a huge table with results of the simulation.
+      <br/>
+      MonteCarlo Chart page is same as the previous one, just here the result is shown on a chart for better understanding.
+    </p>
+    <h2>
+      More about the application
+    </h2>
+    <p>
+      This is a web application. This application is based on <b>Luminus</b> architecture.
+      The application starts on <a href="http://localhost:3000/">http://localhost:3000/</a> once it's run.
+      You can run it with Leiningen by typing "lein run" in project root file.
+      The code regarding the simulation is located in the file <b>"montecarlo/montecarlo_simulation.clj"</b>.
+      Data is taken from YahooFinance datasource, via an API written in Java.
+      Do a <b>rebuild</b> of the project before the first start of the application.
+    </p>
   </div>
 </div>
 {% endblock %}

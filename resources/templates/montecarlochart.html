@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <p>
+        Welcome to MonteCarlo simulation chart page! Here the results of the simulation are shown graphically.
+    </p>
+</div>
+
+<div>
+    <form class="form-horizontal" action="/getchart" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input type="text" class="form-control" name="ticker1" id="ticker1" placeholder="Type ticker here! (GOOG, or DAX, or MSFT, or whatever...)">
+                <br/>
+                <input type="submit" class="btn btn-primary" value="Show Chart">
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+{% endblock %}

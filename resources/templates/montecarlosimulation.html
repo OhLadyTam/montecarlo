@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
+    <p>
+        Welcome to MonteCarlo simulation page! Here the results of the simulation are shown in a table!
+    </p>
+</div>
+<div>
 <form class="form-horizontal" action="/simulate" method="post">
     <fieldset>
         <div class="form-group">
-            <label class="control-label" for="ticker">Ticker</label>
-            <input type="text" class="form-control" name="ticker" id="ticker" placeholder="ticker">
+            <input type="text" class="form-control" name="ticker" id="ticker" placeholder="Type ticker here! (GOOG, or DAX, or MSFT, or whatever...)">
+            <br/>
             <input type="submit" class="btn btn-primary" value="Simulate">
         </div>
     </fieldset>
@@ -32,21 +37,6 @@
     {%endfor%}
     </tbody>
 </table>
-</div>
-
-<div>
-    <form class="form-horizontal" action="/getchart" method="post">
-        <fieldset>
-            <div class="form-group">
-                <label class="control-label" for="ticker">Ticker</label>
-                <input type="text" class="form-control" name="ticker" id="ticker1" placeholder="ticker">
-                <input type="submit" class="btn btn-primary" value="Get Chart">
-            </div>
-            <div class="form-group">
-                <img src="{{servlet-context}}/img/chart.png"></img>
-            </div>
-        </fieldset>
-    </form>
 </div>
 
 {% endblock %}
