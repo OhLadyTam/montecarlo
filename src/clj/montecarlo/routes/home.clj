@@ -142,7 +142,6 @@
                                                                                                                                                                                                                                                                     (incanter.charts/add-lines :dates :col-98 :data tr-mcs)
                                                                                                                                                                                                                                                                     (incanter.charts/add-lines :dates :col-99 :data tr-mcs)
                                                                                                                                                                                                                                                                     incanter.core/view)))
-(draw "GOOG")
 ;render chart
 (defn draw-res [ticker1] (selmer.parser/render-file "montecarlochart.html" (draw ticker1)))
 
