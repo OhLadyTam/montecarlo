@@ -1,16 +1,7 @@
 (ns montecarlo.montecarlo-simulation
   (:require incanter.stats incanter.core incanter.charts incanter.pdf)
   (:import yahoofinance.YahooFinance yahoofinance.Stock histquotes.HistoricalQuote quotes.stock.StockQuote))
-  ;(:import (yahoofinance YahooFinance Stock)
-   ;        (histquotes HistoricalQuote)
-    ;       (quotes.stock StockQuote)
-     ;      (incanter.stats incanter.stats)))
-
-;(ns clj-test1.montecarlo-simulation (:import yahoofinance.YahooFinance))
-
-;(def h (.getHistory (YahooFinance/get "DJI")))
-;(def price (.getPrice (.getQuote (yahoofinance.YahooFinance/get "GOOG"))))
-;(println price)
+  
 
 
 (defn mean [coll]
@@ -78,4 +69,3 @@
 
 
 ;(start-simulation "DAX")
-;(incanter.pdf/save-pdf (incanter.core/view (incanter.charts/histogram (incanter.stats/sample-normal 1000))) "./pdf-chart.pdf")
