@@ -148,10 +148,3 @@
 ;defined routes
 (defroutes home-routes (GET "/" [] (home-page)) (GET "/about" [] (about-page)) (GET "/montecarlosimulation" [] (montecarlosimulation-page)) (GET "/montecarlochart" [] (montecarlochart-page) ) (POST "/simulate" [ticker] (simulate-page ticker)) (POST "/getchart" [ticker1] (draw-res ticker1)))
 
-(def trans-mcs1 [[1 2 3] [4 5 6] [7 8 9]])
-
-(def trans-mcs (incanter.core/to-dataset trans-mcs1))
-
-(incanter.core/view (incanter.core/to-dataset trans-mcs))
-
-(doto (incanter.charts/xy-plot :col-0 :col-1 :data trans-mcs) (incanter.charts/add-lines :col-0 :col-2 :data trans-mcs) incanter.core/view)
