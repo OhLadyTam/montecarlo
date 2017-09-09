@@ -274,6 +274,14 @@ public class Stock {
             HistQuotesRequest hist = new HistQuotesRequest(this.symbol, from, to, interval);
             this.setHistory(hist.getResult());
         }
+
+        for (int i = 0; i < this.history.size(); i++) {
+            if (this.history.get(i).getClose() == null) {
+                this.history.remove(this.history.get(i));
+            }
+        }
+
+
         return this.history;
     }
     

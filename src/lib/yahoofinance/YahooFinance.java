@@ -1,18 +1,19 @@
 
 package yahoofinance;
 
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Logger;
 import histquotes.HistQuotesRequest;
 import histquotes.Interval;
 import quotes.fx.FxQuote;
 import quotes.fx.FxQuotesRequest;
 import quotes.stock.StockQuotesData;
 import quotes.stock.StockQuotesRequest;
+
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.Logger;
 
 
 public class YahooFinance {
@@ -149,5 +150,4 @@ public class YahooFinance {
         }
         return stocks;
     }
-    
 }
