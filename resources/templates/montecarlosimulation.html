@@ -6,7 +6,7 @@
         <div class="form-group">
             <label class="control-label" for="ticker">Ticker</label>
             <input type="text" class="form-control" name="ticker" id="ticker" placeholder="ticker">
-            <input type="submit" class="btn btn-primary" value="Simulate">
+            <input type="submit" class="btn btn-primary" value="Simulate!">
         </div>
     </fieldset>
 </form>
@@ -35,25 +35,15 @@
 </div>
 
 <div>
-    <form class="form-horizontal" action="/getxls" method="post">
-        <fieldset>
-            <div class="form-group">
-                <label class="control-label" for="ticker">Ticker</label>
-                <input type="text" class="form-control" name="ticker" id="ticker2" placeholder="ticker">
-                <input type="submit" class="btn btn-primary" value="Simulate">
-            </div>
-        </fieldset>
-    </form>
-</div>
-
-
-<div>
     <form class="form-horizontal" action="/getchart" method="post">
         <fieldset>
             <div class="form-group">
                 <label class="control-label" for="ticker">Ticker</label>
                 <input type="text" class="form-control" name="ticker" id="ticker1" placeholder="ticker">
-                <input type="submit" class="btn btn-primary" value="Simulate">
+                <input type="submit" class="btn btn-primary" value="Get Chart">
+            </div>
+            <div class="form-group">
+                <img src="{{servlet-context}}/img/chart.png"></img>
             </div>
         </fieldset>
     </form>
